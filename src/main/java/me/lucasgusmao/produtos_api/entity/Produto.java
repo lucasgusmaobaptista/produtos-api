@@ -18,12 +18,12 @@ public class Produto {
   @Column(name="produto_desc", nullable=true)
   private String descricao;
   @Column(name="produto_preco", nullable=false)
-  private double saldo;
+  private Double preco;
 
-    public Produto(String descricao, String nome, double saldo) {
+    public Produto(String descricao, String nome, Double preco) {
         this.descricao = descricao;
         this.nome = nome;
-        this.saldo = saldo;
+        this.preco = preco;
     }
 
     public long getId() {
@@ -50,12 +50,12 @@ public class Produto {
         this.descricao = descricao;
     }
 
-    public double getSaldo() {
-        return saldo;
+    public Double getPreco() {
+        return preco;
     }
 
-    public void setSaldo(double saldo) {
-        this.saldo = saldo;
+    public void setPreco(Double preco) {
+        this.preco = preco;
     }
 
     @Override
@@ -65,7 +65,7 @@ public class Produto {
         sb.append("id=").append(id);
         sb.append(", nome=").append(nome);
         sb.append(", descricao=").append(descricao);
-        sb.append(", saldo=").append(saldo);
+        sb.append(", preço=").append(preco);
         sb.append('}');
         return sb.toString();
     }
