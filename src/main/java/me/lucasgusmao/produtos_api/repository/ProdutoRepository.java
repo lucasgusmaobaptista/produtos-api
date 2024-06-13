@@ -6,4 +6,4 @@ import me.lucasgusmao.produtos_api.entity.Produto;
 
 public interface ProdutoRepository extends JpaRepository<Produto, Long>{
   
-}
+} 
