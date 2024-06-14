@@ -1,5 +1,8 @@
 package me.lucasgusmao.produtos_api.service;
 
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -8,28 +11,27 @@ import me.lucasgusmao.produtos_api.repository.ProdutoRepository;
 
 @Service
 public class ProdutoService {
-  @Autowired
-  private ProdutoRepository repository;
+    @Autowired
+    private ProdutoRepository repository;
 
-  public void verProdutos() {
-    repository.findAll();
-  }
+    public List<Produto> verProdutos() {
+        return repository.findAll();
+    }
 
-  public void verProdutoPorId(Long id) {
-    repository.findById(id);
-  }
+    public Optional<Produto> verProdutoPorId(Long id) {
+        return repository.findById(id);
+    }
 
-  public void criarProduto(String nome, String descricao, Double preco) {
-    Produto p = new Produto(nome, descricao, preco);
-    repository.save(p);
-  }
-  
-  public void atualizarProduto(Produto produto) {
-    repository.save(produto);
-  }
+    public Produto criarProduto(Produto produto) {
+        return repository.save(produto);
+    }
 
-  public void removerProdutoPorId(Long id) {
-    repository.deleteById(id);
-  }
+    public void atualizarProduto(Long id, Produto produto) {
+        repository.save(produto);
+    }
 
+    public void removerProdutoPorId(Long id) {
+        repository.deleteById(id);
+    }
 }
+

@@ -17,13 +17,17 @@ public class Produto {
   private String nome;
   @Column(name="produto_desc", nullable=true)
   private String descricao;
-  @Column(name="produto_preco", nullable=false)
-  private Double preco;
+  @Column(name="produto_preco", nullable = false)
+  private Integer preco;
 
-    public Produto(String descricao, String nome, Double preco) {
+    public Produto(String descricao, String nome, Integer preco) {
         this.descricao = descricao;
         this.nome = nome;
         this.preco = preco;
+    }
+
+    public Produto() {
+
     }
 
     public long getId() {
@@ -50,11 +54,11 @@ public class Produto {
         this.descricao = descricao;
     }
 
-    public Double getPreco() {
+    public int getPreco() {
         return preco;
     }
 
-    public void setPreco(Double preco) {
+    public void setPreco(Integer preco) {
         this.preco = preco;
     }
 
