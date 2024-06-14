@@ -124,7 +124,7 @@ Atualização realizada com sucesso!
 
 #### Deletar Produto
 
-- **URL**: `/produtos/criar`
+- **URL**: `/produtos/deletar/{id}`
 - **Método**: DELETE
 
 **Exemplo de Resposta:**
