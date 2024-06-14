@@ -106,7 +106,7 @@ A aplicação estará disponível em http://localhost:8080
 
 - **URL**: `/produtos/atualizar/{id}`
 - **Método**: PUT
-- **Body**:
+- **Body**: JSON
 
 **Exemplo de requisição:**
 
