@@ -3,6 +3,7 @@ package me.lucasgusmao.produtos_api.controller;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -43,9 +44,9 @@ public class ProdutoController {
     }
 
     @PutMapping("/atualizar/{id}")
-    public String atualizarProduto(@PathVariable Long id, @RequestBody Produto produto) {
-        service.atualizarProduto(id, produto);
-        return "Atualização realizada com sucesso.";
+    public Produto atualizarProduto(@PathVariable Long id, @RequestBody Produto produto) {
+        Produto p = service.atualizarProduto(id, produto);
+        return p;
     }
 
     @DeleteMapping("/remover/{id}")

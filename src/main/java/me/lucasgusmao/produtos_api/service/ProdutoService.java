@@ -26,8 +26,17 @@ public class ProdutoService {
         return repository.save(produto);
     }
 
-    public void atualizarProduto(Long id, Produto produto) {
-        repository.save(produto);
+    public Produto atualizarProduto(Long id, Produto produto) {
+        Optional<Produto> produtoExistente = repository.findById(id);
+        if (produtoExistente.isPresent()) {
+            Produto p = produtoExistente.get();
+            p.setNome(produto.getNome());
+            p.setDescricao(produto.getDescricao());
+            p.setPreco(produto.getPreco());
+            return repository.save(p);
+        } else {
+            throw new RuntimeException("Produto com o ID " + id + " não encontrado!");
+        }
     }
 
     public void removerProdutoPorId(Long id) {
