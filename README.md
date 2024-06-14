@@ -14,7 +14,6 @@ Este projeto é uma API RESTful (CRUD) desenvolvida em Spring Boot para gerencia
 - [Spring Boot](https://spring.io/projects/spring-boot)
 - [Spring MVC](https://docs.spring.io/spring-framework/reference/web/webmvc.html)
 - [Spring Data JPA](https://spring.io/projects/spring-data-jpa)
-- [SpringDoc OpenAPI 3](https://springdoc.org/v2/#spring-webflux-support)
 - [MySQL](https://dev.mysql.com/downloads/)
 
 ## Requisitos
