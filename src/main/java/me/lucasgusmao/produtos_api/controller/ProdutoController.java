@@ -49,8 +49,9 @@ public class ProdutoController {
     }
 
     @DeleteMapping("/remover/{id}")
-    public void removerProduto(@PathVariable Long id) {
+    public String removerProduto(@PathVariable Long id) {
         service.removerProdutoPorId(id);
+        return "Produto removido com sucesso.";
     }
 
 }
