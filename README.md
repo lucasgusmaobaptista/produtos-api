@@ -28,7 +28,7 @@ Este projeto é uma API RESTful (CRUD) desenvolvida em Spring Boot para gerencia
 ### 1. Clonar o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/produtos-api.git
+git clone https://github.com/lucasgusmaobaptista/produtos-api.git
 cd produtos-api
 ```
 
